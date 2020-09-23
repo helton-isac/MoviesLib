@@ -25,7 +25,11 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwB-Q4-7zH">
-                                <rect key="frame" x="161" y="135.66666666666666" width="53" height="53"/>
+                                <rect key="frame" x="162.66666666666666" y="137" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="V4D-P9-B66"/>
+                                    <constraint firstAttribute="width" secondItem="dwB-Q4-7zH" secondAttribute="height" multiplier="1:1" id="WcF-qW-TT0"/>
+                                </constraints>
                                 <state key="normal" image="play"/>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient" translatesAutoresizingMaskIntoConstraints="NO" id="MTS-kU-FOf">

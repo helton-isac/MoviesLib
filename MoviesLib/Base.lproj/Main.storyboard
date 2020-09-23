@@ -29,9 +29,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="play"/>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gradient" translatesAutoresizingMaskIntoConstraints="NO" id="MTS-kU-FOf">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient" translatesAutoresizingMaskIntoConstraints="NO" id="MTS-kU-FOf">
                                 <rect key="frame" x="0.0" y="264" width="375" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="8JR-sI-yyE"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Toy Story 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1lT-dC-6on">
                                 <rect key="frame" x="16" y="325" width="343" height="34"/>
@@ -88,9 +90,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="MTS-kU-FOf" firstAttribute="trailing" secondItem="0dp-0s-4TC" secondAttribute="trailing" id="7U3-af-RGL"/>
                             <constraint firstItem="0dp-0s-4TC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Pqe-73-F43"/>
+                            <constraint firstItem="MTS-kU-FOf" firstAttribute="bottom" secondItem="0dp-0s-4TC" secondAttribute="bottom" id="cpj-TY-SGW"/>
                             <constraint firstItem="0dp-0s-4TC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="j8r-Y3-60g"/>
                             <constraint firstItem="0dp-0s-4TC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rQZ-EH-nyW"/>
+                            <constraint firstItem="MTS-kU-FOf" firstAttribute="leading" secondItem="0dp-0s-4TC" secondAttribute="leading" id="wxY-gK-YKN"/>
                         </constraints>
                     </view>
                 </viewController>

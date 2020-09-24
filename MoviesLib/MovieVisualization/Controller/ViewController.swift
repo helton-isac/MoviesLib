@@ -7,13 +7,19 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
+    // MARK: - Properties
+    
+    // MARK: - IBOutlets
+    
+    // MARK: - Super Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
+    
+    // MARK: - Methods
 
-
+    // MARK: - IBActions
 }
 

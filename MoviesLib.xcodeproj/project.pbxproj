@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		982D64BF251D53BB005344C9 /* movies.json in Resources */ = {isa = PBXBuildFile; fileRef = 982D64BE251D53BB005344C9 /* movies.json */; };
+		982D64D0251D5C73005344C9 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982D64CF251D5C73005344C9 /* Movie.swift */; };
 		98B3ED6E251AB31E00C933F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B3ED6D251AB31E00C933F3 /* AppDelegate.swift */; };
 		98B3ED72251AB31E00C933F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B3ED71251AB31E00C933F3 /* ViewController.swift */; };
 		98B3ED75251AB31E00C933F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98B3ED73251AB31E00C933F3 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		982D64BE251D53BB005344C9 /* movies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = movies.json; sourceTree = "<group>"; };
+		982D64CF251D5C73005344C9 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		98B3ED6A251AB31E00C933F3 /* MoviesLib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviesLib.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98B3ED6D251AB31E00C933F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98B3ED71251AB31E00C933F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 		982D64C6251D559D005344C9 /* MovieVisualization */ = {
 			isa = PBXGroup;
 			children = (
+				982D64CE251D5C61005344C9 /* Model */,
 				982D64C8251D55C6005344C9 /* Controller */,
 			);
 			path = MovieVisualization;
@@ -77,6 +80,14 @@
 				98B3ED7B251AB31E00C933F3 /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		982D64CE251D5C61005344C9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				982D64CF251D5C73005344C9 /* Movie.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		98B3ED61251AB31E00C933F3 = {
@@ -180,6 +191,7 @@
 			files = (
 				98B3ED72251AB31E00C933F3 /* ViewController.swift in Sources */,
 				98B3ED6E251AB31E00C933F3 /* AppDelegate.swift in Sources */,
+				982D64D0251D5C73005344C9 /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

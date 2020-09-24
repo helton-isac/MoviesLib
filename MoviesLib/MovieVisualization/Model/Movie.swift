@@ -5,8 +5,6 @@
 //  Created by Helton Isac Torres Galindo on 24/09/20.
 //
 
-import Foundation
-
 struct Movie: Decodable {
     
     let title: String?
@@ -15,5 +13,5 @@ struct Movie: Decodable {
     let rating: Double?
     let summary: String?
     let image: String?
-    
+
 }

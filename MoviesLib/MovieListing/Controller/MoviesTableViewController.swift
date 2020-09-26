@@ -27,6 +27,8 @@ class MoviesTableViewController: UITableViewController {
         
         let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         
+        fetchedResultsController.delegate = self
+        
         return fetchedResultsController
     }()
     
@@ -66,4 +68,10 @@ class MoviesTableViewController: UITableViewController {
         return cell
     }
 
+}
+
+extension MoviesTableViewController: NSFetchedResultsControllerDelegate {
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        
+    }
 }

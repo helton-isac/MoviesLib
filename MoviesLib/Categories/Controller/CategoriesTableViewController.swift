@@ -90,6 +90,11 @@ class CategoriesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let category = categories[indexPath.row]
+        if selectedCategories.contains(category) {
+            cell.accessoryType = .checkmark
+        } else {
+            cell.accessoryType = .none
+        }
         cell.textLabel?.text = category.name
         return cell
     }
@@ -126,5 +131,18 @@ class CategoriesTableViewController: UITableViewController {
         deleteAction.image = UIImage(systemName: "trash")
         
         return UISwipeActionsConfiguration(actions: [deleteAction])
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let category = self.categories[indexPath.row]
+        let cell = tableView.cellForRow(at: indexPath)
+        if cell?.accessoryType == UITableViewCell.AccessoryType.none {
+            cell?.accessoryType = .checkmark
+            selectedCategories.insert(category)
+        } else {
+            cell?.accessoryType = .none
+            selectedCategories.remove(category)
+        }
+        tableView.deselectRow(at: indexPath, animated: false)
     }
 }

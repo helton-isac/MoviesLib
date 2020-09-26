@@ -93,4 +93,20 @@ class CategoriesTableViewController: UITableViewController {
         cell.textLabel?.text = category.name
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let editAction = UIContextualAction(style: .normal, title: "Editar") { (action, view, completionHandler) in
+            let category = self.categories[indexPath.row]
+            self.showCategoryAlert(for: category)
+            completionHandler(true)
+        }
+        editAction.backgroundColor = .systemBlue
+        editAction.image = UIImage(systemName: "pencil")
+        
+        return UISwipeActionsConfiguration(actions: [editAction])
+    }
+    
+//    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+//
+//    }
 }

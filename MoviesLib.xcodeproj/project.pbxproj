@@ -20,6 +20,7 @@
 		98F92056251F92E8006F091C /* UIViewController+Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F92055251F92E8006F091C /* UIViewController+Context.swift */; };
 		98F9205B251FB11F006F091C /* CategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F9205A251FB11F006F091C /* CategoriesTableViewController.swift */; };
 		98F92063251FCA8C006F091C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F92062251FCA8C006F091C /* MapViewController.swift */; };
+		98F92069251FD912006F091C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F92068251FD912006F091C /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		98F92055251F92E8006F091C /* UIViewController+Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Context.swift"; sourceTree = "<group>"; };
 		98F9205A251FB11F006F091C /* CategoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewController.swift; sourceTree = "<group>"; };
 		98F92062251FCA8C006F091C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		98F92068251FD912006F091C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		2205164D251AB2F500E0D96B /* MoviesLib */ = {
 			isa = PBXGroup;
 			children = (
+				98F92066251FD8FA006F091C /* Settings */,
 				98F92060251FCA75006F091C /* Map */,
 				98F92058251FB0F9006F091C /* Categories */,
 				2205166A251D551E00E0D96B /* Main */,
@@ -216,6 +219,22 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		98F92066251FD8FA006F091C /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				98F92067251FD901006F091C /* Controller */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		98F92067251FD901006F091C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				98F92068251FD912006F091C /* SettingsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -289,6 +308,7 @@
 			files = (
 				987746BD251F639A00DB1032 /* MoviesLib.xcdatamodeld in Sources */,
 				2205167B251D7A9900E0D96B /* MovieTableViewCell.swift in Sources */,
+				98F92069251FD912006F091C /* SettingsViewController.swift in Sources */,
 				22051678251D715300E0D96B /* MoviesTableViewController.swift in Sources */,
 				98F92063251FCA8C006F091C /* MapViewController.swift in Sources */,
 				98F92051251F83DF006F091C /* MovieFormViewController.swift in Sources */,

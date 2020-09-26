@@ -119,5 +119,10 @@ final class MovieFormViewController: UIViewController {
 }
 
 extension MovieFormViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[.originalImage] as? UIImage {
+            imageViewPoster.image = image
+        }
+        dismiss(animated: true, completion: nil)
+    }
 }

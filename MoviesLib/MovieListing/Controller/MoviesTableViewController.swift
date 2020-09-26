@@ -72,6 +72,6 @@ class MoviesTableViewController: UITableViewController {
 
 extension MoviesTableViewController: NSFetchedResultsControllerDelegate {
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        
+        tableView.reloadData()
     }
 }

@@ -56,7 +56,15 @@ extension MapViewController: MKMapViewDelegate {
     }
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        
+        let camera = MKMapCamera()
+        camera.centerCoordinate = view.annotation!.coordinate
+        camera.pitch = 80
+        camera.altitude = 100
+        mapView.setCamera(camera, animated: true)
+        
         let request = MKDirections.Request()
+        request.transportType = .automobile
         request.source = MKMapItem(placemark: MKPlacemark(coordinate: mapView.userLocation.coordinate))
         request.destination = MKMapItem(placemark: MKPlacemark(coordinate: view.annotation!.coordinate))
         

@@ -94,6 +94,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Filmes" id="awb-gr-aHU">
                         <barButtonItem key="backBarButtonItem" title=" " id="dK4-QX-Crm"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="HtM-xV-PCG">
+                            <connections>
+                                <segue destination="gpj-ae-IhB" kind="show" id="9km-TL-z4H"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5dU-MN-1ve" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -236,7 +241,13 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="yn0-7Z-upG"/>
+                    <navigationItem key="navigationItem" id="yn0-7Z-upG">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="fUq-az-Oz4">
+                            <connections>
+                                <segue destination="gpj-ae-IhB" kind="show" id="NqP-o0-8ll"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="imageViewPoster" destination="90c-W7-pdH" id="8c1-E0-gyS"/>
                         <outlet property="labelCategories" destination="uNV-Vt-kYb" id="bHq-eW-zTZ"/>
@@ -248,7 +259,46 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="684" y="123"/>
+            <point key="canvasLocation" x="983" y="517"/>
+        </scene>
+        <!--Cadastro de Filmes-->
+        <scene sceneID="XIX-Rd-grn">
+            <objects>
+                <viewController id="gpj-ae-IhB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OjC-v4-EHt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="SgM-vT-YNs">
+                                <rect key="frame" x="18" y="-79" width="375" height="812"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <viewLayoutGuide key="safeArea" id="qjT-I6-ztd"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="972-Lc-GsG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Cadastro de Filmes" largeTitleDisplayMode="never" id="jeO-in-frj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LWa-Zi-U09" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="982" y="-157"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jaB-bw-27h">
+            <objects>
+                <viewController id="KKP-bF-VMZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NGa-H7-2rW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="myC-e3-DJb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wnb-ip-4lj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1713" y="-157"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Hbv-CA-hKQ">
@@ -269,6 +319,9 @@
             <point key="canvasLocation" x="-903.20000000000005" y="122.66009852216749"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="NqP-o0-8ll"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="gradient" width="600" height="120"/>
         <image name="play" width="53" height="53"/>

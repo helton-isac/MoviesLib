@@ -17,7 +17,7 @@ class MovieTableViewCell: UITableViewCell {
     
     // MARK: - Methods
     func configure(with movie: Movie) {
-        //imageViewPoster.image = UIImage(named: movie.image ?? "placeholder")
+        imageViewPoster.image = movie.poster
         labelTitle.text = movie.title
         labelRating.text = movie.ratingFormatted
         labelSummary.text = movie.summary

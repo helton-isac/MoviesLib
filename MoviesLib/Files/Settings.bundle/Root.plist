@@ -10,15 +10,15 @@
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 			<key>Title</key>
-			<string>Group</string>
+			<string>Preferências</string>
 		</dict>
 		<dict>
 			<key>Type</key>
 			<string>PSTextFieldSpecifier</string>
 			<key>Title</key>
-			<string>Name</string>
+			<string>Categoria favorita</string>
 			<key>Key</key>
-			<string>name_preference</string>
+			<string>category</string>
 			<key>DefaultValue</key>
 			<string></string>
 			<key>IsSecure</key>
@@ -34,27 +34,33 @@
 			<key>Type</key>
 			<string>PSToggleSwitchSpecifier</string>
 			<key>Title</key>
-			<string>Enabled</string>
+			<string>Auto Play</string>
 			<key>Key</key>
-			<string>enabled_preference</string>
+			<string>autoplay</string>
 			<key>DefaultValue</key>
 			<true/>
 		</dict>
 		<dict>
 			<key>Type</key>
-			<string>PSSliderSpecifier</string>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>Esquema de cores</string>
 			<key>Key</key>
-			<string>slider_preference</string>
+			<string>color</string>
 			<key>DefaultValue</key>
-			<real>0.5</real>
-			<key>MinimumValue</key>
 			<integer>0</integer>
-			<key>MaximumValue</key>
-			<integer>1</integer>
-			<key>MinimumValueImage</key>
-			<string></string>
-			<key>MaximumValueImage</key>
-			<string></string>
+			<key>Titles</key>
+			<array>
+				<string>Branco</string>
+				<string>Laranja</string>
+				<string>Azul</string>
+			</array>
+			<key>Values</key>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+				<integer>2</integer>
+			</array>
 		</dict>
 	</array>
 </dict>

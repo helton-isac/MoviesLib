@@ -11,7 +11,6 @@ import CoreData
 class MoviesTableViewController: UITableViewController {
 
     // MARK: - Properties
-    var movies: [Movie] = []
     let label: UILabel = {
         let label = UILabel(frame: .zero)
         label.text = "Sem filmes cadastrados"
@@ -40,8 +39,7 @@ class MoviesTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let vc = segue.destination as? MovieViewController, let indexPath = tableView.indexPathForSelectedRow else {return}
-        vc.movie = movies[indexPath.row]
-        
+        vc.movie = fetchedResultsController.object(at: indexPath)
     }
 
     // MARK: - Methods
@@ -50,20 +48,21 @@ class MoviesTableViewController: UITableViewController {
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return movies.count
+        let count = fetchedResultsController.fetchedObjects?.count ?? 0
+        tableView.backgroundView = count > 0 ? nil : label
+        
+        return count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? MovieTableViewCell else {
             return UITableViewCell()
         }
-        let movie = movies[indexPath.row]
+        let movie = fetchedResultsController.object(at: indexPath)
         cell.configure(with: movie)
         return cell
     }

@@ -306,6 +306,9 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="26" id="Tdk-IU-LvA"/>
                                                                 </constraints>
+                                                                <connections>
+                                                                    <segue destination="vhJ-li-R83" kind="show" id="6F1-L9-8bp"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDn-ao-2A8">
                                                                 <rect key="frame" x="35" y="0.0" width="300" height="23.666666666666668"/>
@@ -416,20 +419,36 @@
             </objects>
             <point key="canvasLocation" x="836" y="-277.09359605911334"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="PXI-ne-tYE">
+        <!--Categorias-->
+        <scene sceneID="e5q-ss-ID7">
             <objects>
-                <viewController id="5Wq-2q-QFC" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Fwy-UT-oFi">
+                <tableViewController id="vhJ-li-R83" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="S5y-35-lqZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="M1m-Cw-JfI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XRF-tF-gPv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="PNm-Jm-xI9">
+                                <rect key="frame" x="0.0" y="28" width="375" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PNm-Jm-xI9" id="X9P-aV-rXW">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="vhJ-li-R83" id="daG-4r-KaK"/>
+                            <outlet property="delegate" destination="vhJ-li-R83" id="QSP-Zq-Xd2"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Categorias" id="kGV-N1-3vT">
+                        <barButtonItem key="backBarButtonItem" title=" " id="7h9-1P-5De"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MiX-4D-vzS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1662" y="-277"/>
+            <point key="canvasLocation" x="1542" y="-277"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Hbv-CA-hKQ">

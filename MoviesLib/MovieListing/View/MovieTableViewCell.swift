@@ -17,11 +17,6 @@ class MovieTableViewCell: UITableViewCell {
     
     // MARK: - Methods
     func configure(with movie: Movie) {
-        if let image = movie.image {
-            imageViewPoster.image = UIImage(named: image)
-        } else {
-            imageViewPoster.image = nil
-        }
         //imageViewPoster.image = UIImage(named: movie.image ?? "placeholder")
         labelTitle.text = movie.title
         labelRating.text = movie.ratingFormatted

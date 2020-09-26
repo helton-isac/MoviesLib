@@ -52,12 +52,18 @@ final class MovieFormViewController: UIViewController {
     // MARK: - Methods
     @objc
     private func keyboardWillShow(notification: NSNotification){
-        
+        guard let userInfo = notification.userInfo,
+              let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect
+        else { return }
+
+        scrollView.contentInset.bottom = keyboardFrame.size.height - view.safeAreaInsets.bottom
+        scrollView.verticalScrollIndicatorInsets.bottom = keyboardFrame.size.height - view.safeAreaInsets.bottom
     }
     
     @objc
     private func keyboardWillHide(){
-        
+        scrollView.contentInset.bottom = 0
+        scrollView.verticalScrollIndicatorInsets.bottom = 0
     }
     
 }

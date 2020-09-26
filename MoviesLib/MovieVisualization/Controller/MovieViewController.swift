@@ -32,9 +32,7 @@ final class MovieViewController: UIViewController {
         labelDuration.text = movie.duration
         textViewSummary.text = movie.summary
         imageViewPoster.image = movie.poster
-        
-        
-        
+        labelCategories.text = (movie.categories as? Set<Category>)?.compactMap({$0.name}).sorted().joined(separator: "|")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

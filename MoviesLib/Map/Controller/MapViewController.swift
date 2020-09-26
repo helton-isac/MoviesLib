@@ -47,7 +47,22 @@ final class MapViewController: UIViewController {
 }
 
 extension MapViewController: MKMapViewDelegate {
-    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        let request = MKDirections.Request()
+        request.source = MKMapItem(placemark: MKPlacemark(coordinate: mapView.userLocation.coordinate))
+        request.destination = MKMapItem(placemark: MKPlacemark(coordinate: view.annotation!.coordinate))
+        
+        let directions = MKDirections(request: request)
+        directions.calculate { (response, error) in
+            if error == nil {
+                guard let response = response,
+                      let route = response.routes.sorted(by: {$0.distance < $1.distance}).first
+                else { return }
+                self.mapView.removeOverlays(self.mapView.overlays)
+                self.mapView.addOverlay(route.polyline, level: .aboveRoads)
+            }
+        }
+    }
 }
 
 extension MapViewController: UISearchBarDelegate {

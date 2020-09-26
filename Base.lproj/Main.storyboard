@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xIh-Oy-c0D">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xDJ-xx-N7L">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -103,7 +103,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5dU-MN-1ve" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-124" y="122.66009852216749"/>
+            <point key="canvasLocation" x="-903" y="845"/>
         </scene>
         <!--Movie View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -168,7 +168,7 @@
                                         </variation>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="h8Z-vy-EH8">
-                                        <rect key="frame" x="16" y="37.666666666666686" width="343" height="310"/>
+                                        <rect key="frame" x="16" y="37.666666666666686" width="343" height="261"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -258,7 +258,63 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="836" y="448"/>
+            <point key="canvasLocation" x="-1436" y="1582"/>
+        </scene>
+        <!--Mapa-->
+        <scene sceneID="tVM-0w-3gT">
+            <objects>
+                <viewController id="6iA-Oc-0v4" customClass="MapViewController" customModule="MoviesLib" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="81V-Rb-R5v">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="D4O-aY-eHG">
+                                <rect key="frame" x="0.0" y="100" width="375" height="629"/>
+                            </mapView>
+                            <searchBar contentMode="redraw" placeholder="O que você quer procurar?" translatesAutoresizingMaskIntoConstraints="NO" id="A1v-ct-KLM">
+                                <rect key="frame" x="0.0" y="44" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aHF-nX-MON"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="D4O-aY-eHG" firstAttribute="top" secondItem="A1v-ct-KLM" secondAttribute="bottom" id="3Iu-c1-n6Z"/>
+                            <constraint firstItem="A1v-ct-KLM" firstAttribute="trailing" secondItem="aHF-nX-MON" secondAttribute="trailing" id="8Cx-dx-fvc"/>
+                            <constraint firstItem="D4O-aY-eHG" firstAttribute="trailing" secondItem="aHF-nX-MON" secondAttribute="trailing" id="D9n-oZ-UU5"/>
+                            <constraint firstItem="D4O-aY-eHG" firstAttribute="bottom" secondItem="aHF-nX-MON" secondAttribute="bottom" id="fZp-9x-ir3"/>
+                            <constraint firstItem="A1v-ct-KLM" firstAttribute="leading" secondItem="aHF-nX-MON" secondAttribute="leading" id="oGi-8j-seR"/>
+                            <constraint firstItem="A1v-ct-KLM" firstAttribute="top" secondItem="aHF-nX-MON" secondAttribute="top" id="qUo-QJ-Y29"/>
+                            <constraint firstItem="D4O-aY-eHG" firstAttribute="leading" secondItem="aHF-nX-MON" secondAttribute="leading" id="wyp-ek-dkP"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Mapa" image="map.fill" catalog="system" id="Phv-fk-fsj"/>
+                    <connections>
+                        <outlet property="mapView" destination="D4O-aY-eHG" id="YH9-Jn-Jvk"/>
+                        <outlet property="searchBar" destination="A1v-ct-KLM" id="g50-JG-mDV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UcS-Dd-ThQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="100" y="122.66009852216749"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="RgS-5P-9La">
+            <objects>
+                <tabBarController id="xDJ-xx-N7L" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="N34-x5-hVE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="xIh-Oy-c0D" kind="relationship" relationship="viewControllers" id="1EK-r6-2u0"/>
+                        <segue destination="6iA-Oc-0v4" kind="relationship" relationship="viewControllers" id="oAq-7M-raF"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iXp-JI-3rb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-426" y="-621"/>
         </scene>
         <!--Cadastro de Filmes-->
         <scene sceneID="WcO-xB-vux">
@@ -269,7 +325,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f4w-Cv-MUG">
-                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wpe-lc-XBh" userLabel="Container">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="563.66666666666663"/>
@@ -418,7 +474,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I78-M0-ihc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="836" y="-277.09359605911334"/>
+            <point key="canvasLocation" x="-490" y="1581"/>
         </scene>
         <!--Categorias-->
         <scene sceneID="AEW-fG-O1d">
@@ -455,19 +511,20 @@
                     <navigationItem key="navigationItem" title="Categorias" id="UI1-Do-XRX">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="xkq-cG-tbh">
                             <connections>
-                                <action selector="add:" destination="sCY-W6-BKi" id="Y83-Cb-ICa"/>
+                                <action selector="add:" destination="sCY-W6-BKi" id="tLJ-Zn-mIk"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="klS-Bx-WWs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1588" y="-277"/>
+            <point key="canvasLocation" x="287" y="1581"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Filmes-->
         <scene sceneID="Hbv-CA-hKQ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xIh-Oy-c0D" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Filmes" image="movies" id="stX-f9-Vve"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="6tz-w1-2ti">
                         <rect key="frame" x="0.0" y="44" width="375" height="96"/>
@@ -488,6 +545,8 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="gradient" width="600" height="120"/>
+        <image name="map.fill" catalog="system" width="128" height="110"/>
+        <image name="movies" width="22" height="22"/>
         <image name="play" width="53" height="53"/>
         <namedColor name="Main">
             <color red="1" green="0.76499998569488525" blue="0.25900000333786011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

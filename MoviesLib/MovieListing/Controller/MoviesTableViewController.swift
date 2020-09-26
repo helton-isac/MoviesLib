@@ -25,7 +25,6 @@ class MoviesTableViewController: UITableViewController {
         fetchRequest.sortDescriptors = [sortDescriptor]
         
         let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
-        
         fetchedResultsController.delegate = self
         
         return fetchedResultsController
@@ -49,13 +48,14 @@ class MoviesTableViewController: UITableViewController {
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
         let count = fetchedResultsController.fetchedObjects?.count ?? 0
         tableView.backgroundView = count > 0 ? nil : label
-        
         return count
     }
 

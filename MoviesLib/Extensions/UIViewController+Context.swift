@@ -3,7 +3,6 @@
 //  MoviesLib
 //
 //  Created by Helton Isac Torres Galindo on 26/09/20.
-//  Copyright © 2020 FIAP. All rights reserved.
 //
 
 import UIKit

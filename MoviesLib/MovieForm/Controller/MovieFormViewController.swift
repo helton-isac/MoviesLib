@@ -2,8 +2,7 @@
 //  MovieFormViewController.swift
 //  MoviesLib
 //
-//  Created by Eric Alves Brito on 26/09/20.
-//  Copyright © 2020 FIAP. All rights reserved.
+//  Created by Helton Isac Torres Galindo on 26/09/20.
 //
 
 import UIKit
@@ -25,7 +24,7 @@ final class MovieFormViewController: UIViewController {
     var selectedCategories: Set<Category> = [] {
         didSet {
             if selectedCategories.count > 0 {
-                labelCategories.text = selectedCategories.compactMap({$0.name}).sorted().joined(separator: "|")
+                labelCategories.text = selectedCategories.compactMap({$0.name}).sorted().joined(separator: " | ")
             } else {
                 labelCategories.text = "Categorias"
             }
@@ -52,29 +51,34 @@ final class MovieFormViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? CategoriesTableViewController {
             vc.delegate = self
-            vc.selectedCategories = self.selectedCategories
+            vc.selectedCategories = selectedCategories
         }
     }
     
     // MARK: - IBActions
     @IBAction func selectImage(_ sender: UIButton) {
-        let alert = UIAlertController(title: "Selecionar poster", message: "De onde você deseja escolher o pôster?", preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: "Selecionar pôster", message: "De onde você deseja escolher o pôster?", preferredStyle: .alert)
+        
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             let cameraAction = UIAlertAction(title: "Câmera", style: .default) { (_) in
                 self.selectPictureFrom(.camera)
             }
             alert.addAction(cameraAction)
         }
+        
         let libraryAction = UIAlertAction(title: "Biblioteca de fotos", style: .default) { (_) in
             self.selectPictureFrom(.photoLibrary)
         }
+        alert.addAction(libraryAction)
+        
         let photosAction = UIAlertAction(title: "Álbum de fotos", style: .default) { (_) in
             self.selectPictureFrom(.savedPhotosAlbum)
         }
-        let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel)
-        alert.addAction(libraryAction)
         alert.addAction(photosAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
         alert.addAction(cancelAction)
+
         present(alert, animated: true, completion: nil)
     }
     
@@ -136,17 +140,19 @@ final class MovieFormViewController: UIViewController {
     }
 }
 
-extension MovieFormViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension MovieFormViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
         if let image = info[.originalImage] as? UIImage {
             imageViewPoster.image = image
         }
+        
         dismiss(animated: true, completion: nil)
     }
 }
 
 extension MovieFormViewController: CategoriesDelegate {
     func setSelectedCategories(_ categories: Set<Category>) {
-        self.selectedCategories = categories
+        selectedCategories = categories
     }
 }

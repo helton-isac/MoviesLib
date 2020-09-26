@@ -15,13 +15,12 @@
 		22051678251D715300E0D96B /* MoviesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22051677251D715300E0D96B /* MoviesTableViewController.swift */; };
 		2205167B251D7A9900E0D96B /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2205167A251D7A9900E0D96B /* MovieTableViewCell.swift */; };
 		2205167E251D7D7600E0D96B /* Movie+RatingFormatted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2205167D251D7D7600E0D96B /* Movie+RatingFormatted.swift */; };
-		987746BD251F639A00DB1032 /* MoviesLib.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 987746BB251F639A00DB1032 /* MoviesLib.xcdatamodeld */; };
-		98F92051251F83DF006F091C /* MovieFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F92050251F83DF006F091C /* MovieFormViewController.swift */; };
-		98F92056251F92E8006F091C /* UIViewController+Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F92055251F92E8006F091C /* UIViewController+Context.swift */; };
-		98F9205B251FB11F006F091C /* CategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F9205A251FB11F006F091C /* CategoriesTableViewController.swift */; };
-		98F92063251FCA8C006F091C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F92062251FCA8C006F091C /* MapViewController.swift */; };
-		98F92069251FD912006F091C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F92068251FD912006F091C /* SettingsViewController.swift */; };
-		98F9206D251FDC7F006F091C /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 98F9206C251FDC7F006F091C /* Settings.bundle */; };
+		22D0DE12251F639900C740B8 /* MoviesLib.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 22D0DE10251F639900C740B8 /* MoviesLib.xcdatamodeld */; };
+		22D0DE16251F83C500C740B8 /* MovieFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D0DE15251F83C500C740B8 /* MovieFormViewController.swift */; };
+		22D0DE18251F92B700C740B8 /* UIViewController+Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D0DE17251F92B700C740B8 /* UIViewController+Context.swift */; };
+		22D0DE1C251FB11700C740B8 /* CategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D0DE1B251FB11600C740B8 /* CategoriesTableViewController.swift */; };
+		22D0DE20251FCA7A00C740B8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D0DE1F251FCA7A00C740B8 /* MapViewController.swift */; };
+		22D0DE24251FD90700C740B8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D0DE23251FD90700C740B8 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,13 +34,12 @@
 		22051677251D715300E0D96B /* MoviesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewController.swift; sourceTree = "<group>"; };
 		2205167A251D7A9900E0D96B /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		2205167D251D7D7600E0D96B /* Movie+RatingFormatted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+RatingFormatted.swift"; sourceTree = "<group>"; };
-		987746BC251F639A00DB1032 /* MoviesLib.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoviesLib.xcdatamodel; sourceTree = "<group>"; };
-		98F92050251F83DF006F091C /* MovieFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieFormViewController.swift; sourceTree = "<group>"; };
-		98F92055251F92E8006F091C /* UIViewController+Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Context.swift"; sourceTree = "<group>"; };
-		98F9205A251FB11F006F091C /* CategoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewController.swift; sourceTree = "<group>"; };
-		98F92062251FCA8C006F091C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		98F92068251FD912006F091C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		98F9206C251FDC7F006F091C /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		22D0DE11251F639900C740B8 /* MoviesLib.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoviesLib.xcdatamodel; sourceTree = "<group>"; };
+		22D0DE15251F83C500C740B8 /* MovieFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieFormViewController.swift; sourceTree = "<group>"; };
+		22D0DE17251F92B700C740B8 /* UIViewController+Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Context.swift"; sourceTree = "<group>"; };
+		22D0DE1B251FB11600C740B8 /* CategoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewController.swift; sourceTree = "<group>"; };
+		22D0DE1F251FCA7A00C740B8 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		22D0DE23251FD90700C740B8 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,13 +73,13 @@
 		2205164D251AB2F500E0D96B /* MoviesLib */ = {
 			isa = PBXGroup;
 			children = (
-				98F92066251FD8FA006F091C /* Settings */,
-				98F92060251FCA75006F091C /* Map */,
-				98F92058251FB0F9006F091C /* Categories */,
+				22D0DE21251FD8EE00C740B8 /* Settings */,
+				22D0DE1D251FCA3800C740B8 /* Map */,
+				22D0DE19251FB0E000C740B8 /* Categories */,
 				2205166A251D551E00E0D96B /* Main */,
 				22051675251D711D00E0D96B /* MovieListing */,
 				2205166D251D559300E0D96B /* MovieVisualization */,
-				98F9204E251F839C006F091C /* MovieForm */,
+				22D0DE13251F839600C740B8 /* MovieForm */,
 				2205166C251D554F00E0D96B /* Files */,
 				2205167C251D7D2800E0D96B /* Extensions */,
 				2205166F251D55EE00E0D96B /* Supporting Files */,
@@ -100,8 +98,7 @@
 		2205166C251D554F00E0D96B /* Files */ = {
 			isa = PBXGroup;
 			children = (
-				987746BB251F639A00DB1032 /* MoviesLib.xcdatamodeld */,
-				98F9206C251FDC7F006F091C /* Settings.bundle */,
+				22D0DE10251F639900C740B8 /* MoviesLib.xcdatamodeld */,
 			);
 			path = Files;
 			sourceTree = "<group>";
@@ -169,71 +166,71 @@
 			isa = PBXGroup;
 			children = (
 				2205167D251D7D7600E0D96B /* Movie+RatingFormatted.swift */,
-				98F92055251F92E8006F091C /* UIViewController+Context.swift */,
+				22D0DE17251F92B700C740B8 /* UIViewController+Context.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		98F9204E251F839C006F091C /* MovieForm */ = {
+		22D0DE13251F839600C740B8 /* MovieForm */ = {
 			isa = PBXGroup;
 			children = (
-				98F9204F251F83BD006F091C /* Controller */,
+				22D0DE14251F83B100C740B8 /* Controller */,
 			);
 			path = MovieForm;
 			sourceTree = "<group>";
 		};
-		98F9204F251F83BD006F091C /* Controller */ = {
+		22D0DE14251F83B100C740B8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				98F92050251F83DF006F091C /* MovieFormViewController.swift */,
+				22D0DE15251F83C500C740B8 /* MovieFormViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		98F92058251FB0F9006F091C /* Categories */ = {
+		22D0DE19251FB0E000C740B8 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				98F92059251FB103006F091C /* Controller */,
+				22D0DE1A251FB0F700C740B8 /* Controller */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
 		};
-		98F92059251FB103006F091C /* Controller */ = {
+		22D0DE1A251FB0F700C740B8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				98F9205A251FB11F006F091C /* CategoriesTableViewController.swift */,
+				22D0DE1B251FB11600C740B8 /* CategoriesTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		98F92060251FCA75006F091C /* Map */ = {
+		22D0DE1D251FCA3800C740B8 /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				98F92061251FCA7B006F091C /* Controller */,
+				22D0DE1E251FCA6800C740B8 /* Controller */,
 			);
 			path = Map;
 			sourceTree = "<group>";
 		};
-		98F92061251FCA7B006F091C /* Controller */ = {
+		22D0DE1E251FCA6800C740B8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				98F92062251FCA8C006F091C /* MapViewController.swift */,
+				22D0DE1F251FCA7A00C740B8 /* MapViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		98F92066251FD8FA006F091C /* Settings */ = {
+		22D0DE21251FD8EE00C740B8 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				98F92067251FD901006F091C /* Controller */,
+				22D0DE22251FD8F800C740B8 /* Controller */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
 		};
-		98F92067251FD901006F091C /* Controller */ = {
+		22D0DE22251FD8F800C740B8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				98F92068251FD912006F091C /* SettingsViewController.swift */,
+				22D0DE23251FD90700C740B8 /* SettingsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -296,7 +293,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98F9206D251FDC7F006F091C /* Settings.bundle in Resources */,
 				2205165B251AB2F700E0D96B /* LaunchScreen.storyboard in Resources */,
 				22051658251AB2F700E0D96B /* Assets.xcassets in Resources */,
 				22051656251AB2F500E0D96B /* Main.storyboard in Resources */,
@@ -310,16 +306,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				987746BD251F639A00DB1032 /* MoviesLib.xcdatamodeld in Sources */,
+				22D0DE12251F639900C740B8 /* MoviesLib.xcdatamodeld in Sources */,
 				2205167B251D7A9900E0D96B /* MovieTableViewCell.swift in Sources */,
-				98F92069251FD912006F091C /* SettingsViewController.swift in Sources */,
+				22D0DE24251FD90700C740B8 /* SettingsViewController.swift in Sources */,
 				22051678251D715300E0D96B /* MoviesTableViewController.swift in Sources */,
-				98F92063251FCA8C006F091C /* MapViewController.swift in Sources */,
-				98F92051251F83DF006F091C /* MovieFormViewController.swift in Sources */,
+				22D0DE20251FCA7A00C740B8 /* MapViewController.swift in Sources */,
+				22D0DE16251F83C500C740B8 /* MovieFormViewController.swift in Sources */,
 				2205167E251D7D7600E0D96B /* Movie+RatingFormatted.swift in Sources */,
 				22051653251AB2F500E0D96B /* MovieViewController.swift in Sources */,
-				98F9205B251FB11F006F091C /* CategoriesTableViewController.swift in Sources */,
-				98F92056251F92E8006F091C /* UIViewController+Context.swift in Sources */,
+				22D0DE1C251FB11700C740B8 /* CategoriesTableViewController.swift in Sources */,
+				22D0DE18251F92B700C740B8 /* UIViewController+Context.swift in Sources */,
 				2205164F251AB2F500E0D96B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -518,12 +514,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		987746BB251F639A00DB1032 /* MoviesLib.xcdatamodeld */ = {
+		22D0DE10251F639900C740B8 /* MoviesLib.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				987746BC251F639A00DB1032 /* MoviesLib.xcdatamodel */,
+				22D0DE11251F639900C740B8 /* MoviesLib.xcdatamodel */,
 			);
-			currentVersion = 987746BC251F639A00DB1032 /* MoviesLib.xcdatamodel */;
+			currentVersion = 22D0DE11251F639900C740B8 /* MoviesLib.xcdatamodel */;
 			path = MoviesLib.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

@@ -317,7 +317,7 @@
                                 <rect key="frame" x="284" y="104" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="autoPlayChanged:" destination="PxN-L0-g9K" eventType="valueChanged" id="59L-v4-tOA"/>
+                                    <action selector="autoplayChanged:" destination="PxN-L0-g9K" eventType="valueChanged" id="n5T-Ye-Yz0"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Esquema de cores" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yB-Ty-0t1">
@@ -336,7 +336,7 @@
                                     <segment title="Azul"/>
                                 </segments>
                                 <connections>
-                                    <action selector="colorChanged:" destination="PxN-L0-g9K" eventType="valueChanged" id="qnk-yc-OkR"/>
+                                    <action selector="colorChanged:" destination="PxN-L0-g9K" eventType="valueChanged" id="GyJ-ig-biC"/>
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Categoria favorita de filmes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hc7-Pc-aWv">
@@ -352,7 +352,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="categoryChanged:" destination="PxN-L0-g9K" eventType="primaryActionTriggered" id="QxJ-l1-syF"/>
+                                    <action selector="categoryChanged:" destination="PxN-L0-g9K" eventType="primaryActionTriggered" id="4s4-15-Bs6"/>
                                 </connections>
                             </textField>
                         </subviews>
@@ -361,9 +361,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Configurações" image="settings" id="8Tt-XA-hw0"/>
                     <connections>
-                        <outlet property="segmentedControlColors" destination="ZLc-7r-o12" id="gf2-ob-QgH"/>
-                        <outlet property="switchAutoPLay" destination="MxH-zH-n0Q" id="Yaj-9M-sxw"/>
-                        <outlet property="textFieldCategory" destination="Qtk-Ai-0kJ" id="fBn-hU-ilp"/>
+                        <outlet property="segmentedControlColors" destination="ZLc-7r-o12" id="Q9m-Yr-yu8"/>
+                        <outlet property="switchAutoplay" destination="MxH-zH-n0Q" id="Vlv-ZR-5Am"/>
+                        <outlet property="textFieldCategory" destination="Qtk-Ai-0kJ" id="YAB-G4-OHS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BsA-mx-IH4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

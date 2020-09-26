@@ -3,18 +3,17 @@
 //  MoviesLib
 //
 //  Created by Helton Isac Torres Galindo on 26/09/20.
-//  Copyright © 2020 FIAP. All rights reserved.
 //
 
 import UIKit
 import MapKit
 
+//https://developer.apple.com/videos/play/wwdc2016/509/
 final class MapViewController: UIViewController {
     
     // MARK: - IBOutlets
-    
-    @IBOutlet var searchBar: UISearchBar!
-    @IBOutlet var mapView: MKMapView!
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var mapView: MKMapView!
     
     // MARK: - Properties
     lazy var locationManager = CLLocationManager()
@@ -26,9 +25,7 @@ final class MapViewController: UIViewController {
         requestAuthorization()
     }
     
-    
     // MARK: - IBActions
-    
     
     // MARK: - Methods
     private func setupView() {
@@ -37,13 +34,19 @@ final class MapViewController: UIViewController {
         mapView.userTrackingMode = .follow
         mapView.delegate = self
         searchBar.delegate = self
-        
     }
     
     private func requestAuthorization() {
+        
         //CLLocationManager.locationServicesEnabled()
+        /*
+        switch CLLocationManager.authorizationStatus() {
+        case .authorizedWhenInUse
+        }
+        */
         locationManager.requestWhenInUseAuthorization()
     }
+    
 }
 
 extension MapViewController: MKMapViewDelegate {
@@ -51,7 +54,7 @@ extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         let renderer = MKPolylineRenderer(overlay: overlay)
         renderer.lineWidth = 7.0
-        renderer.strokeColor = #colorLiteral(red: 0.5725490451, green: 0, blue: 0.2313725501, alpha: 1)
+        renderer.strokeColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
         return renderer
     }
     
@@ -63,8 +66,8 @@ extension MapViewController: MKMapViewDelegate {
         camera.altitude = 100
         mapView.setCamera(camera, animated: true)
         
+        
         let request = MKDirections.Request()
-        request.transportType = .automobile
         request.source = MKMapItem(placemark: MKPlacemark(coordinate: mapView.userLocation.coordinate))
         request.destination = MKMapItem(placemark: MKPlacemark(coordinate: view.annotation!.coordinate))
         
@@ -72,18 +75,25 @@ extension MapViewController: MKMapViewDelegate {
         directions.calculate { (response, error) in
             if error == nil {
                 guard let response = response,
-                      let route = response.routes.sorted(by: {$0.distance < $1.distance}).first
-                else { return }
+                      let route = response.routes.sorted(by: {$0.distance < $1.distance}).first else {return}
+                print("Nome:", route.name)
+                print("Distância:", route.distance)
+                print("Duração:", route.expectedTravelTime)
+                for step in route.steps {
+                    print("Em", step.distance, "metros", step.instructions)
+                }
                 self.mapView.removeOverlays(self.mapView.overlays)
                 self.mapView.addOverlay(route.polyline, level: .aboveRoads)
             }
         }
+        
     }
 }
 
 extension MapViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
+        
         let request = MKLocalSearch.Request()
         request.region = mapView.region
         request.naturalLanguageQuery = searchBar.text
@@ -91,7 +101,7 @@ extension MapViewController: UISearchBarDelegate {
         let search = MKLocalSearch(request: request)
         search.start { (response, error) in
             if error == nil {
-                guard let response = response else { return }
+                guard let response = response else {return}
                 self.mapView.removeAnnotations(self.mapView.annotations)
                 for item in response.mapItems {
                     let annotation = MKPointAnnotation()
@@ -103,7 +113,5 @@ extension MapViewController: UISearchBarDelegate {
                 self.mapView.showAnnotations(self.mapView.annotations, animated: true)
             }
         }
-    
     }
 }
-

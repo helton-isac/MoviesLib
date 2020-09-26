@@ -17,6 +17,7 @@ class CategoriesTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadCategories()
     }
     
     // MARK: Properties
@@ -44,6 +45,14 @@ class CategoriesTableViewController: UITableViewController {
         }
         
         let okAction = UIAlertAction(title: title, style: .default) { (_) in
+            let category = category ?? Category(context: self.context)
+            category.name = alert.textFields?.first?.text
+            do {
+                try self.context.save()
+                self.loadCategories()
+            } catch {
+                print(error)
+            }
             
         }
         alert.addAction(okAction)

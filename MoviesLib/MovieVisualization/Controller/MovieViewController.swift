@@ -34,5 +34,11 @@ final class MovieViewController: UIViewController {
         textViewSummary.text = movie.summary
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? MovieFormViewController {
+            vc.movie = movie
+        }
+    }
+    
     // MARK: - IBActions
 }

@@ -106,7 +106,25 @@ class CategoriesTableViewController: UITableViewController {
         return UISwipeActionsConfiguration(actions: [editAction])
     }
     
-//    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-//
-//    }
+    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "Excluir") { (action, view, completionHandler) in
+            let category = self.categories[indexPath.row]
+            self.context.delete(category)
+            do {
+                try self.context.save()
+            } catch {
+                print(error)
+            }
+            
+            self.categories.remove(at: indexPath.row)
+            self.selectedCategories.remove(category)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            
+            completionHandler(true)
+        }
+        deleteAction.backgroundColor = .systemRed
+        deleteAction.image = UIImage(systemName: "trash")
+        
+        return UISwipeActionsConfiguration(actions: [deleteAction])
+    }
 }

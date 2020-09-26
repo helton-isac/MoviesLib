@@ -30,10 +30,32 @@ class CategoriesTableViewController: UITableViewController {
     
     // MARK: - IBActions
     @IBAction func add(_ sender: Any) {
-
+        showCategoryAlert()
     }
     
     // MARK: - Methods
+    private func showCategoryAlert(for category: Category? = nil) {
+        let title = category == nil ? "Adicionar" : "Editar"
+        let alert = UIAlertController(title: title, message: nil, preferredStyle: .alert)
+        
+        alert.addTextField { (textField) in
+            textField.placeholder = "Nome da categoria"
+            textField.text = category?.name
+        }
+        
+        let okAction = UIAlertAction(title: title, style: .default) { (_) in
+            
+        }
+        alert.addAction(okAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel) { (_) in
+            
+        }
+        alert.addAction(cancelAction)
+        
+        present(alert, animated: true)
+    }
+    
     private func loadCategories() {
         let fetchRequest: NSFetchRequest<Category> = Category.fetchRequest()
         let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)

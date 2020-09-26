@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oaO-JH-Ef5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xIh-Oy-c0D">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -264,7 +264,7 @@
         <!--Cadastro de Filmes-->
         <scene sceneID="WcO-xB-vux">
             <objects>
-                <viewController id="oaO-JH-Ef5" sceneMemberID="viewController">
+                <viewController id="oaO-JH-Ef5" customClass="MovieFormViewController" customModule="MoviesLib" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="US6-lx-8I7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -321,6 +321,9 @@
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTF-pm-6Ik">
                                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
                                                                 <state key="normal" title="Selecionar Imagem"/>
+                                                                <connections>
+                                                                    <action selector="selectImage:" destination="oaO-JH-Ef5" eventType="touchUpInside" id="4aT-Ae-eRl"/>
+                                                                </connections>
                                                             </button>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IC0-e9-Z3X">
                                                                 <rect key="frame" x="0.0" y="30.000000000000028" width="335" height="140"/>
@@ -361,6 +364,9 @@
                                                         <state key="normal" title="Cadastrar">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="save:" destination="oaO-JH-Ef5" eventType="touchUpInside" id="50P-O4-gEZ"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -395,6 +401,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Cadastro de Filmes" largeTitleDisplayMode="never" id="R9w-Lz-UZh"/>
+                    <connections>
+                        <outlet property="buttonSave" destination="XdQ-P5-Pmw" id="L2z-hz-VLC"/>
+                        <outlet property="imageViewPoster" destination="IC0-e9-Z3X" id="bMM-Fl-TVi"/>
+                        <outlet property="labelCategories" destination="bDn-ao-2A8" id="a5b-Po-ssh"/>
+                        <outlet property="scrollView" destination="f4w-Cv-MUG" id="FbM-Ny-1DN"/>
+                        <outlet property="textFieldDuration" destination="Hm2-v1-2QY" id="vNS-Gt-GbJ"/>
+                        <outlet property="textFieldRating" destination="z2I-p0-Y9c" id="TWr-RA-WLK"/>
+                        <outlet property="textFieldTitle" destination="6od-HI-iFG" id="kqq-66-sdB"/>
+                        <outlet property="textViewSummary" destination="0su-Vu-PgI" id="nU0-Qn-wh1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I78-M0-ihc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -435,7 +451,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ek9-lq-exM"/>
+        <segue reference="H0N-CX-Mdc"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="gradient" width="600" height="120"/>

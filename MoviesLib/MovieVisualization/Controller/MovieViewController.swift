@@ -6,11 +6,15 @@
 //
 
 import UIKit
+import AVKit
 
 final class MovieViewController: UIViewController {
     
     // MARK: - Properties
     var movie: Movie!
+    var moviePlayer: AVPlayer?
+    var moviePlayerController: AVPlayerViewController?
+    var trailer: String = ""
     
     // MARK: - IBOutlets
     @IBOutlet weak var imageViewPoster: UIImageView!
@@ -33,6 +37,10 @@ final class MovieViewController: UIViewController {
         textViewSummary.text = movie.summary
         imageViewPoster.image = movie.poster
         labelCategories.text = (movie.categories as? Set<Category>)?.compactMap({$0.name}).sorted().joined(separator: " | ")
+        
+        if let title = movie.title {
+            loadTrailer(with: title)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -41,5 +49,45 @@ final class MovieViewController: UIViewController {
         }
     }
     
+    // MARK: - Methods
+    private func loadTrailer(with title: String){
+        let itunesPath = "https://itunes.apple.com/search?media=movie&entity=movie&term="
+        
+        guard let encodedTitle = title.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed),
+              let url = URL(string: "\(itunesPath)\(encodedTitle)")
+        else { return }
+        
+        URLSession.shared.dataTask(with: url) { (data, _, _) in
+            let apiResult = try! JSONDecoder().decode(ItunesResult.self, from: data!)
+            self.trailer = apiResult.results.first?.previewUrl ?? ""
+            self.prepareVideo()
+        }.resume()
+    }
+    
     // MARK: - IBActions
+    @IBAction func playTrailer(_ sender: UIButton) {
+        guard let moviePlayerController = moviePlayerController else { return }
+        present(moviePlayerController, animated: true) {
+            self.moviePlayer?.play()
+        }
+        
+    }
+    
+    private func prepareVideo() {
+        guard let url = URL(string: trailer) else {return}
+        moviePlayer = AVPlayer(url: url)
+        DispatchQueue.main.async {
+            self.moviePlayerController = AVPlayerViewController()
+            self.moviePlayerController?.player = self.moviePlayer
+        }
+        
+    }
+}
+
+struct ItunesResult: Codable {
+    let results: [MovieInfo]
+}
+
+struct MovieInfo: Codable {
+    let previewUrl: String
 }
